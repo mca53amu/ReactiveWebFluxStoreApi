@@ -45,9 +45,9 @@ public class HandsetStoreController {
 			@RequestParam(required = false) String resolution, @RequestParam(required = false) String audioJack,
 			@RequestParam(required = false) String gps, @RequestParam(required = false) String battery) {
 
-		Flux<Mobile> page = mobileService.fetchMobileByProperties(id, brand, picture, announceDate, priceEur, sim,
+		Flux<Mobile> list = mobileService.fetchMobileByProperties(id, brand, picture, announceDate, priceEur, sim,
 				resolution, audioJack, gps, battery, sortColumn.property, sortDirection);
-		return page;
+		return list;
 	}
 
 }
